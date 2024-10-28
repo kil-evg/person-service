@@ -10,8 +10,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @EqualsAndHashCode(of = "id")
-@Entity
+@Entity(name = "Citizen")
 @Table(name = "persons")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Person implements Serializable {
     @Id
     private int id;
@@ -19,6 +20,5 @@ public class Person implements Serializable {
     private String name;
     private LocalDate birthDate;
     @Setter
- //    @Embedded
     private Address address;
 }

@@ -1,12 +1,8 @@
 package ait.cohort46.person.dto;
 
-import lombok.*;
+import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Setter
 public class AddressDto {
     private String city;
     private String street;
